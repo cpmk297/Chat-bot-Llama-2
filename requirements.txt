@@ -1,0 +1,7 @@
+streamlit
+
+langchain
+
+time 
+
+langchain_huggingface
