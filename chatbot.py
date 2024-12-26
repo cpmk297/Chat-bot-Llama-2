@@ -11,7 +11,8 @@ from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 llm = HuggingFaceEndpoint(
     repo_id = "microsoft/Phi-3.5-mini-instruct",
     temperature = 0.3,
-    model_kwargs = {"max_length": 128}
+    model_kwargs = {"max_length": 128},
+    client_kwargs = {"token": st.secrets['HUGGINGFACEHUB_API_TOKEN']}
 )
 
 chat = ChatHuggingFace(llm = llm, verbose = False)
